@@ -1,0 +1,41 @@
+<?php
+/**
+ * VW Eco Nature: Block Patterns
+ *
+ * @package VW Eco Nature
+ * @since   1.0.0
+ */
+
+/**
+ * Register Block Pattern Category.
+ */
+if ( function_exists( 'register_block_pattern_category' ) ) {
+
+	register_block_pattern_category(
+		'vw-eco-nature',
+		array( 'label' => __( 'VW Eco Nature', 'vw-eco-nature' ) )
+	);
+}
+
+/**
+ * Register Block Patterns.
+ */
+if ( function_exists( 'register_block_pattern' ) ) {
+	register_block_pattern(
+		'vw-eco-nature/banner-section',
+		array(
+			'title'      => __( 'Banner Section', 'vw-eco-nature' ),
+			'categories' => array( 'vw-eco-nature' ),
+			'content'    => "<!-- wp:cover {\"url\":\"" . esc_url(get_template_directory_uri()) . "/inc/block-patterns/images/banner.png\",\"id\":6827,\"dimRatio\":40,\"align\":\"full\",\"className\":\"banner-section\"} -->\n<div class=\"wp-block-cover alignfull has-background-dim-40 has-background-dim banner-section\" style=\"background-image:url(" . esc_url(get_template_directory_uri()) . "/inc/block-patterns/images/banner.png)\"><div class=\"wp-block-cover__inner-container\"><!-- wp:columns {\"align\":\"full\"} -->\n<div class=\"wp-block-columns alignfull\"><!-- wp:column {\"width\":\"25%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:25%\"></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\",\"width\":\"50%\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\" style=\"flex-basis:50%\"><!-- wp:heading {\"textAlign\":\"center\",\"level\":1,\"className\":\"mb-2\"} -->\n<h1 class=\"has-text-align-center mb-2\">Lorem ipsum is simply dummy text of printing</h1>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"className\":\"text-center mb-2 mt-0\"} -->\n<p class=\"has-text-align-center text-center mb-2 mt-0\">Lorem Ipsum has been the industry standard.&nbsp;Lorem Ipsum has been the industry standard.&nbsp;Lorem Ipsum has been</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"align\":\"center\",\"className\":\"mt-0\"} -->\n<div class=\"wp-block-buttons aligncenter mt-0\"><!-- wp:button {\"style\":{\"color\":{\"background\":\"#24a500\"}}} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background\" style=\"background-color:#24a500\">START TODAY</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"width\":\"25%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:25%\"></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:cover -->",
+		)
+	);
+
+	register_block_pattern(
+		'vw-eco-nature/services-section',
+		array(
+			'title'      => __( 'Services Section', 'vw-eco-nature' ),
+			'categories' => array( 'vw-eco-nature' ),
+			'content'    => "<!-- wp:cover {\"overlayColor\":\"white\",\"align\":\"full\",\"className\":\"article-outer-box\"} -->\n<div class=\"wp-block-cover alignfull has-white-background-color has-background-dim article-outer-box\"><div class=\"wp-block-cover__inner-container\"><!-- wp:columns {\"align\":\"wide\",\"className\":\"article-container\"} -->\n<div class=\"wp-block-columns alignwide article-container\"><!-- wp:column {\"width\":\"66.66%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:66.66%\"><!-- wp:heading {\"className\":\"ms-4\",\"textColor\":\"black\"} -->\n<h2 class=\"ms-4 has-black-color has-text-color\">Lorem ipsum is simply dummy</h2>\n<!-- /wp:heading -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"width\":\"22.22%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:22.22%\"><!-- wp:image {\"align\":\"center\",\"id\":6882,\"width\":76,\"height\":76,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"" . esc_url(get_template_directory_uri()) . "/inc/block-patterns/images/services-icon1.png\" alt=\"\" class=\"wp-image-6882\" width=\"76\" height=\"76\"/></figure></div>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"width\":\"77.77%\",\"className\":\"ms-0\"} -->\n<div class=\"wp-block-column ms-0\" style=\"flex-basis:77.77%\"><!-- wp:heading {\"level\":4,\"className\":\"mb-2 mt-0\",\"textColor\":\"black\"} -->\n<h4 class=\"mb-2 mt-0 has-black-color has-text-color\">Feature Title 1</h4>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"className\":\"text-left m-0\",\"textColor\":\"black\"} -->\n<p class=\"text-left m-0 has-black-color has-text-color\">Lorem Ipsum has been the industry standard. Lorem Ipsum has been the industry standard.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"width\":\"22.22%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:22.22%\"><!-- wp:image {\"align\":\"center\",\"id\":6881,\"width\":77,\"height\":76,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"" . esc_url(get_template_directory_uri()) . "/inc/block-patterns/images/services-icon2.png\" alt=\"\" class=\"wp-image-6881\" width=\"77\" height=\"76\"/></figure></div>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"width\":\"77.77%\",\"className\":\"ms-0\"} -->\n<div class=\"wp-block-column ms-0\" style=\"flex-basis:77.77%\"><!-- wp:heading {\"level\":4,\"className\":\"mb-2 mt-0\",\"textColor\":\"black\"} -->\n<h4 class=\"mb-2 mt-0 has-black-color has-text-color\">Feature Title 2</h4>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"className\":\"text-left m-0\",\"textColor\":\"black\"} -->\n<p class=\"text-left m-0 has-black-color has-text-color\">Lorem Ipsum has been the industry standard. Lorem Ipsum has been the industry standard.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"width\":\"22.22%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:22.22%\"><!-- wp:image {\"align\":\"center\",\"id\":6883,\"width\":78,\"height\":78,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->\n<div class=\"wp-block-image\"><figure class=\"aligncenter size-large is-resized\"><img src=\"" . esc_url(get_template_directory_uri()) . "/inc/block-patterns/images/services-icon3.png\" alt=\"\" class=\"wp-image-6883\" width=\"78\" height=\"78\"/></figure></div>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"width\":\"77.77%\",\"className\":\"ms-0\"} -->\n<div class=\"wp-block-column ms-0\" style=\"flex-basis:77.77%\"><!-- wp:heading {\"level\":4,\"className\":\"mb-2 mt-0\",\"textColor\":\"black\"} -->\n<h4 class=\"mb-2 mt-0 has-black-color has-text-color\">Feature Title 3</h4>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"className\":\"text-left m-0\",\"textColor\":\"black\"} -->\n<p class=\"text-left m-0 has-black-color has-text-color\">Lorem Ipsum has been the industrys standard. Lorem Ipsum has been the industrys standard.</p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"width\":\"33.33%\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:33.33%\"><!-- wp:heading {\"level\":3,\"textColor\":\"black\"} -->\n<h3 class=\"has-black-color has-text-color\">About us</h3>\n<!-- /wp:heading -->\n\n<!-- wp:image {\"id\":6829,\"width\":358,\"height\":218,\"sizeSlug\":\"large\",\"linkDestination\":\"media\"} -->\n<figure class=\"wp-block-image size-large is-resized\"><img src=\"" . esc_url(get_template_directory_uri()) . "/inc/block-patterns/images/services1.png\" alt=\"\" class=\"wp-image-6829\" width=\"358\" height=\"218\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"placeholder\":\"Write title\",\"fontSize\":\"large\"} -->\n<p class=\"has-text-align-center has-large-font-size\"></p>\n<!-- /wp:paragraph --></div></div>\n<!-- /wp:cover -->",
+		)
+	);
+}
